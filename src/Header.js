@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import {Link} from "../routes";
 
 function Header() {
   return (
     <Wrapper>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link route='/'><a>Home</a></Link>
         </li>
         <li>
-          <Link to="/first">First</Link>
+          <Link route='/first'><a>First</a></Link>
         </li>
         <li>
-          <Link to="/second">Second</Link>
+          <Link route='/second'><a>Second</a></Link>
         </li>
         <li>
-          <Link to="/third">Third</Link>
+          <Link route='/third'><a>Third</a></Link>
         </li>
       </ul>
     </Wrapper>
