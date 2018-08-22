@@ -4,20 +4,17 @@ import styled from 'styled-components'
 import Header from "../src/Header";
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 
-// import Content from "../temp/Content";
-
 export default class MyApp extends App {
 
   render () {
     const {Component, pageProps} = this.props
-    const location = {key: this.props.router.route}
+    const location = this.props.router.route
     return <Container>
       <Header />
-      {/* <Content {...pageProps}/> */}
       <Wrapper>
         <TransitionGroup className="transition-group">
           <CSSTransition
-            key={location.key}
+            key={location}
             timeout={{ enter: 300, exit: 300 }}
             classNames="fade"
           >
